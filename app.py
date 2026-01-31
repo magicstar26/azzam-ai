@@ -3,8 +3,11 @@ import google.generativeai as genai
 
 st.set_page_config(page_title="Pena Tenang", page_icon="🕵️‍♂️")
 
-# --- API KEY ---
-MY_API_KEY = "AIzaSyB6F5g_CoSv02PSNLK6ehtVe6UlJMiUf2o" 
+# Cari baris MY_API_KEY dan ubah jadi begini:
+import os
+
+# Ambil API Key dari pengaturan sistem (bukan ditulis manual)
+MY_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 # --- Judul ---
 st.title("🕵️‍♂️ Pena Tenang: Bersama Azzam")
@@ -77,4 +80,5 @@ if st.button("Dengarkan dan Beri Petunjuk"):
         st.warning("Tuliskan petunjuk terlebih dahulu, detektif.")
 
 # --- CSS ---
+
 st.markdown("<style>body {font-family: 'Segoe UI', sans-serif;}</style>", unsafe_allow_html=True)
