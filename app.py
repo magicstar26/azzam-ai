@@ -1,7 +1,7 @@
 import streamlit as st
 import google.generativeai as genai
 
-st.set_page_config(page_title="Pena Tenang", page_icon="🕵️‍♂️")
+st.set_page_config(page_title="mengobrol", page_icon="🕵️‍♂️")
 
 # Cari baris MY_API_KEY dan ubah jadi begini:
 import os
@@ -10,11 +10,11 @@ import os
 MY_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 # --- Judul ---
-st.title("🕵️‍♂️ Pena Tenang: Bersama Azzam")
+st.title("🕵mengobrol: Bersama Azzam")
 st.write("Azzam siap mendengarkan dan menganalisis setiap pikiranmu. Bagikan apa yang mengganjal!")
 
 # --- Area Input ---
-user_input = st.text_area("Tuliskan apa yang ingin kamu ceritakan...", placeholder="Mungkin tentang kasus sulit atau perasaanmu...", height=150)
+user_input = st.text_area("Tuliskan apa yang ingin kamu ceritakan... (data anda tidak bisa terlihat oleh pembuat website)", placeholder="Mungkin tentang kasus sulit atau bagaimana", height=150)
 
 if st.button("Dengarkan dan Beri Petunjuk"):
     if user_input:
@@ -83,4 +83,5 @@ if st.button("Dengarkan dan Beri Petunjuk"):
 # --- CSS ---
 
 st.markdown("<style>body {font-family: 'Segoe UI', sans-serif;}</style>", unsafe_allow_html=True)
+
 
