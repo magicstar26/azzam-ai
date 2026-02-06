@@ -14,7 +14,7 @@ st.title("🕵mengobrol: Bersama Azzam")
 st.write("Azzam siap mendengarkan dan menganalisis setiap pikiranmu. Bagikan apa yang mengganjal!")
 
 # --- Area Input ---
-user_input = st.text_area("Tuliskan apa yang ingin kamu ceritakan... (data anda tidak bisa terlihat oleh pembuat website)", placeholder="Mungkin tentang kasus sulit atau bagaimana", height=150)
+user_input = st.text_area("Tuliskan apa yang ingin kamu ceritakan... (data anda tidak akan terlihat oleh pembuat website)", placeholder="Mungkin tentang kasus sulit atau bagaimana", height=150)
 
 if st.button("Dengarkan dan Beri Petunjuk"):
     if user_input:
@@ -44,6 +44,7 @@ if st.button("Dengarkan dan Beri Petunjuk"):
                 kalau lawan bicara lagi serius ya sriu. kalau tidak ya bikin canda
                 jangan gunakan bahasa AI
                 kita biasae ngenggo bahasa mengkenen misal chattan kro wong kuh
+                bahasa lebih ke pria ya, jan kaya cewe
                 """ # <-- Tanda kutip penutup ini yang tadi hilang
 
                 available_models = [m.name for m in genai.list_models() if 'generateContent' in m.supported_generation_methods]
@@ -83,5 +84,6 @@ if st.button("Dengarkan dan Beri Petunjuk"):
 # --- CSS ---
 
 st.markdown("<style>body {font-family: 'Segoe UI', sans-serif;}</style>", unsafe_allow_html=True)
+
 
 
